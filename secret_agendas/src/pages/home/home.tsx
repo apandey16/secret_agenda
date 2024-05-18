@@ -44,6 +44,6 @@ const Home: React.FC = () => {
 
 export default Home;
 
-function generateUniqueId() {
+export function generateUniqueId() {
     return Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
 }

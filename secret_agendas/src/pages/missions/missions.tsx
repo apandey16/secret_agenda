@@ -1,17 +1,19 @@
 import React from 'react';
 import Cookies from "js-cookie";
-import { useNavigate } from "react-router-dom";
 import Header from '../../components/header/header';
-
+import TaskHandler from '../../components/TaskHandler/TaskHandler';
 
 const Missions: React.FC = () => {    
-    const userId = Cookies.get("userId");
+    const tasksFinished = Cookies.get("tasksFinished");
 
     return (
         <main>
            <Header />
+           <pre style={{ textAlign: 'center' }}> Total Tasks Finished: {tasksFinished} </pre>
+            <TaskHandler />
         </main>
     );
 }
+
 
 export default Missions;
