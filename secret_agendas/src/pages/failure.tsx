@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
-import Header from '../../components/header/header';
-import { punishments } from '../../components/TaskHandler/punishments';
+import Header from '../components/header/header';
+import { punishments } from '../components/TaskHandler/punishments';
 import { useNavigate } from "react-router-dom";
 
 const Failure: React.FC = () => {

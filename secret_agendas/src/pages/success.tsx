@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
-import Header from '../../components/header/header';
-import { rewards } from '../../components/TaskHandler/rewards';
+import Header from '../components/header/header';
+import { rewards } from '../components/TaskHandler/rewards';
 import { useNavigate } from "react-router-dom";
 
 

@@ -1,35 +1,27 @@
 'use client';
 import React, { useEffect } from 'react';
-import Header from '../../components/header/header';
-import GameRules from '../../components/game_rules/game_rules';
+import Header from '../components/header/header';
+import GameRules from '../components/game_rules/game_rules';
 import Cookies from "js-cookie";
 import { useNavigate } from "react-router-dom";
-import { generateTasks } from '../../components/TaskHandler/TaskHandler';
+import { generateTasks } from '../components/TaskHandler/TaskHandler';
 
 
 const Home: React.FC = () => {
     const navigate = useNavigate();
 
     if (Cookies.get('UserId') === undefined) {
-        useEffect(() => {
-            const userId = generateUniqueId();
-            Cookies.set("userId", userId, { expires: 1 });
-          }, []);
+        const userId = generateUniqueId();
+        Cookies.set("userId", userId, { expires: 1 });
     } 
     if (Cookies.get("tasksFinished") === undefined) {
-        useEffect(() => {
-            Cookies.set("tasksFinished", '0' , {expires: 1});
-          }, []);
+        Cookies.set("tasksFinished", '0' , {expires: 1});
     }
     if (Cookies.get('tasksFailed') === undefined) {
-        useEffect(() => {
-            Cookies.set("tasksFailed", '0', { expires: 1 });
-          }, []);
+        Cookies.set("tasksFailed", '0', { expires: 1 });
     }
     if (Cookies.get('curTask') === undefined) {
-        useEffect(() => {
-            Cookies.set("CurTask", '0', { expires: 1 });
-          }, []);
+        Cookies.set("CurTask", '0', { expires: 1 });
     } 
 
     function handleClickNormal() {       

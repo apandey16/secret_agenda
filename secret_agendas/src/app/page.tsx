@@ -1,9 +1,9 @@
 'use client';
 import React from 'react';
-import Home from '../pages/home/home';
-import Missions from '../pages/missions/missions';
-import Success from '../pages/win_state/success';
-import Failure from '../pages/win_state/failure';
+import Home from '../pages/home';
+import Missions from '../pages/missions';
+import Success from '../pages/success';
+import Failure from '../pages/failure';
 import { HashRouter, Route, Routes } from "react-router-dom";
 
 export default function main() {

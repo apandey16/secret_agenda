@@ -1,7 +1,7 @@
 import React from 'react';
 import Cookies from "js-cookie";
-import Header from '../../components/header/header';
-import TaskHandler from '../../components/TaskHandler/TaskHandler';
+import Header from '../components/header/header';
+import TaskHandler from '../components/TaskHandler/TaskHandler';
 import { useNavigate } from 'react-router-dom';
 
 const Missions: React.FC = () => {    
