@@ -20,8 +20,13 @@ const Home: React.FC = () => {
             Cookies.set("tasksFinished", '0' , {expires: 1});
           }, []);
     }
+    if (Cookies.get('tasksFailed') === undefined) {
+        useEffect(() => {
+            Cookies.set("tasksFailed", '0', { expires: 1 });
+          }, []);
+    } 
 
-    function handleClick() {        
+    function handleClickNormal() {        
         navigate("/missions");
       }
 
@@ -32,7 +37,7 @@ const Home: React.FC = () => {
             <div style={{ display: 'flex', justifyContent: 'center' }}>
                 <button
                     onClick={() => {
-                        handleClick();
+                        handleClickNormal();
                     }
                 }>
                     Continue

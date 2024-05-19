@@ -1,3 +1,20 @@
 export const tasks = {
-    
+    1: 'Convince someone to swap a piece of clothing with you',
+    2: 'Get someone to give you a piggyback ride',
+    3: 'Challange someone to a thumb war, loser takes a drink',
+    4: 'Challege someone to a staring contest, loser takes a drink',
+    5: 'Swap drinks with someone',
+    6: 'Get someone to give you a sip of their drink',
+    7: 'Get someone to take a sip of your drink',
+    8: 'Slip something into someone\'s pocket without them noticing',
+    9: 'Get someone to take a selfie with you',
+    10: 'Get someone to take a shot with you',
+    11: 'Challange someone to a dance off, loser takes a drink',
+    12: 'Challenge someone to RPS, loser takes a drink',
+    13: 'Convince someone that you have been part of a faous movie',
+    14: 'Convince some that you have a famous relative',
+    15: 'Use random words in a sentence and get someone to believe you are speaking a different language',
+    16: 'Use a cheesy pick up line on someone in the middle of a conversation',
+    17: 'Convince someone that you have a secret talent and when they ask to see it, do something ridiculous',
+    18: 'Convince someone that they forgot to pay you back for something',
 }
