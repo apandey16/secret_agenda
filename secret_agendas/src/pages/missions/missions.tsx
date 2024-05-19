@@ -13,6 +13,7 @@ const Missions: React.FC = () => {
     function resetGame() {
         Cookies.set("tasksFinished", '0', { expires: 1 });
         Cookies.set("tasksFailed", '0', { expires: 1 });
+        Cookies.set("curTask", '0', { expires: 1 });
         navigate('/')
     }
 
@@ -24,7 +25,7 @@ const Missions: React.FC = () => {
            <pre style={{ textAlign: 'center' }}> Tasks Failed: {tasksFailed} </pre>
             <TaskHandler />
             <div style={{ textAlign: 'center' }}>
-                <pre>If you want to restart the game (reseting all of your stats) click the button below to move on. </pre>
+                <pre>{"\n\n\nIf you want to restart the game (reseting all of your stats) click the button below to move on."} </pre>
                 <button onClick={() => { resetGame() }}> Restart Game </button>
             </div>
         </main>

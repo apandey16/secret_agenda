@@ -1,9 +1,6 @@
 'use client';
-import React, { useEffect } from 'react';
-import { punishments } from './punishments';
-import { rewards } from './rewards';
+import React from 'react';
 import { tasks } from './tasks';
-import { generateUniqueId } from '../../pages/home/home';
 import Cookies from "js-cookie";
 import { useNavigate } from "react-router-dom";
 
@@ -15,7 +12,8 @@ const TaskHandler: React.FC = () => {
         const tasksFailed = parseInt(tasks || "0") + 1;
         
         Cookies.set("tasksFailed", tasksFailed.toString(), { expires: 1 });
-        window.location.reload();
+        Cookies.set("curTask", generateTasks(), { expires: 1 })
+        navigate("/missions/failure");
     }
     
     function handleSuccess() {        
@@ -23,14 +21,16 @@ const TaskHandler: React.FC = () => {
         const tasksFinished = parseInt(tasks || "0") + 1;
 
         Cookies.set("tasksFinished", tasksFinished.toString(), { expires: 1 });
-        window.location.reload();
+        Cookies.set("curTask", generateTasks(), { expires: 1 })
+        navigate("/missions/success");
     }
+    const curTask = Cookies.get("curTask");
 
     return (
         <header style={{ textAlign: 'center' }}>
-            {/* Route to new failure and success p
-            age to present the failure task or the success result */}
-            <pre>{"Task Handler"}</pre>
+            {/* Route to new failure and success page to present the failure task or the success result */}
+            <pre> {'\n\nYour Current Task:'} </pre>
+            <pre>{curTask}</pre>
 
             <button onClick={() => { handleFailure() }}> Task Failed </button>
             <button onClick={() => { handleSuccess() }}> Task Succeeded </button>
@@ -39,3 +39,10 @@ const TaskHandler: React.FC = () => {
 }
 
 export default TaskHandler;
+
+export function generateTasks() {
+    const randomIndex = Math.floor(Math.random() * Object.keys(tasks).length);
+    const tasksKey = Object.keys(tasks)[randomIndex];
+    const task = tasks[tasksKey as unknown as keyof typeof tasks];
+    return task;
+}

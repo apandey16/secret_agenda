@@ -4,6 +4,7 @@ import Header from '../../components/header/header';
 import GameRules from '../../components/game_rules/game_rules';
 import Cookies from "js-cookie";
 import { useNavigate } from "react-router-dom";
+import { generateTasks } from '../../components/TaskHandler/TaskHandler';
 
 
 const Home: React.FC = () => {
@@ -24,9 +25,15 @@ const Home: React.FC = () => {
         useEffect(() => {
             Cookies.set("tasksFailed", '0', { expires: 1 });
           }, []);
+    }
+    if (Cookies.get('curTask') === undefined) {
+        useEffect(() => {
+            Cookies.set("CurTask", '0', { expires: 1 });
+          }, []);
     } 
 
-    function handleClickNormal() {        
+    function handleClickNormal() {       
+        Cookies.set("curTask", generateTasks(), { expires: 1 }); 
         navigate("/missions");
       }
 
