@@ -17,4 +17,5 @@ export const tasks = {
     16: 'Use a cheesy pick up line on someone in the middle of a conversation',
     17: 'Convince someone that you have a secret talent and when they ask to see it, do something ridiculous',
     18: 'Convince someone that they forgot to pay you back for something',
+    19: 'Read someone their Miranda Rights',
 }
