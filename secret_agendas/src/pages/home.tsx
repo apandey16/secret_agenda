@@ -1,5 +1,5 @@
 'use client';
-import React, { useEffect } from 'react';
+import React from 'react';
 import Header from '../components/header/header';
 import GameRules from '../components/game_rules/game_rules';
 import Cookies from "js-cookie";
