@@ -1,15 +1,17 @@
 'use client';
 import React from 'react';
-import Header from '../components/header/header';
-import { rewards } from '../components/TaskHandler/rewards';
-import { useNavigate } from "react-router-dom";
+import Header from '../../../../components/header/header';
+import { rewards } from '../../../../components/TaskHandler/rewards';
+import { useRouter } from 'next/navigation';
+// import { useNavigate } from "react-router-dom";
 
 
 const Success: React.FC = () => {
-    const navigate = useNavigate();
+    const navigate = useRouter();
 
     function handleClick() {   
-        navigate("/missions");
+        navigate.push("/missions");
+        // console.log("Continue");
     }
 
     function generateReward() {

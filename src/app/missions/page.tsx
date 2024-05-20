@@ -1,20 +1,22 @@
+'use client'
 import React from 'react';
 import Cookies from "js-cookie";
-import Header from '../components/header/header';
-import TaskHandler from '../components/TaskHandler/TaskHandler';
-import { useNavigate } from 'react-router-dom';
+import Header from '../../../components/header/header';
+import TaskHandler from '../../../components/TaskHandler/TaskHandler';
+import { useRouter } from 'next/navigation';
+// import { useNavigate } from 'react-router-dom';
 
 const Missions: React.FC = () => {    
     const tasksFinished = Cookies.get("tasksFinished");
     const tasksFailed = Cookies.get("tasksFailed");
     const tasksUnderaken = parseInt(tasksFinished || '0') + parseInt(tasksFailed || '0');
-    const navigate = useNavigate();
+    const navigate = useRouter();
 
     function resetGame() {
         Cookies.set("tasksFinished", '0', { expires: 1 });
         Cookies.set("tasksFailed", '0', { expires: 1 });
         Cookies.set("curTask", '0', { expires: 1 });
-        navigate('/')
+        navigate.push('/')
     }
 
     return (

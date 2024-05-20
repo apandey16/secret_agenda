@@ -2,10 +2,10 @@
 import React from 'react';
 import { tasks } from './tasks';
 import Cookies from "js-cookie";
-import { useNavigate } from "react-router-dom";
+import { useRouter } from 'next/navigation';
 
 const TaskHandler: React.FC = () => {
-    const navigate = useNavigate();
+    const navigate = useRouter();
 
     function handleFailure() {        
         const tasks = Cookies.get("tasksFailed");
@@ -13,7 +13,7 @@ const TaskHandler: React.FC = () => {
         
         Cookies.set("tasksFailed", tasksFailed.toString(), { expires: 1 });
         Cookies.set("curTask", generateTasks(), { expires: 1 })
-        navigate("/missions/failure");
+        navigate.push("/missions/failure");
     }
     
     function handleSuccess() {        
@@ -22,7 +22,7 @@ const TaskHandler: React.FC = () => {
 
         Cookies.set("tasksFinished", tasksFinished.toString(), { expires: 1 });
         Cookies.set("curTask", generateTasks(), { expires: 1 })
-        navigate("/missions/success");
+        navigate.push("/missions/success");
     }
     const curTask = Cookies.get("curTask");
 
