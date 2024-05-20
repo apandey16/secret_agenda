@@ -2,6 +2,7 @@
 import React from 'react';
 import Header from '../../components/header/header';
 import GameRules from '../../components/game_rules/game_rules';
+import { generateUniqueId } from '../../components/utlis';
 import Cookies from "js-cookie";
 import { useRouter } from 'next/navigation';
 import { generateTasks } from '../../components/TaskHandler/TaskHandler';
@@ -48,6 +49,3 @@ const Home: React.FC = () => {
 
 export default Home;
 
-export function generateUniqueId() {
-    return Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
-}
