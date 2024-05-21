@@ -18,4 +18,9 @@ export const tasks = {
     17: 'Convince someone that you have a secret talent and when they ask to see it, do something ridiculous',
     18: 'Convince someone that they forgot to pay you back for something',
     19: 'Read someone their Miranda Rights',
+    20: 'Do a handstand',
+    21: 'Do a cartwheel',
+    22: 'Hit a bulls-eye or better in 6 darts or less',
+    23: 'Play a game of chess by yourself',
+    24: 'Speak in a British accent for the next 5 minutes',
 }
