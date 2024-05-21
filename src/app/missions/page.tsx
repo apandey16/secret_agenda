@@ -13,9 +13,10 @@ const Missions: React.FC = () => {
     const navigate = useRouter();
 
     function resetGame() {
-        Cookies.set("tasksFinished", '0', { expires: 1 });
-        Cookies.set("tasksFailed", '0', { expires: 1 });
-        Cookies.set("curTask", '0', { expires: 1 });
+        Cookies.remove("userId");
+        Cookies.remove("tasksFinished");
+        Cookies.remove("tasksFailed");
+        Cookies.remove("curTask");
         navigate.push('/')
     }
 

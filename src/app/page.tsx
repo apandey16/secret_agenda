@@ -23,7 +23,9 @@ const Home: React.FC = () => {
     }
     if (Cookies.get('curTask') === undefined) {
         Cookies.set("CurTask", '0', { expires: 1 });
-    } 
+    } else {
+      navigate.push("/missions");
+  }
 
     function handleClickNormal() {       
         Cookies.set("curTask", generateTasks(), { expires: 1 }); 
