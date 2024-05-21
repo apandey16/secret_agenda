@@ -32,8 +32,8 @@ const TaskHandler: React.FC = () => {
             <pre> {'\nYour Current Task:'} </pre>
             <pre  style={{textWrap:'wrap'}}>{curTask}</pre>
 
-            <button className = 'taskFailed' onClick={() => { handleFailure() }}> Task Failed </button>
-            <button className = 'taskSucceeded'onClick={() => { handleSuccess() }}> Task Succeeded </button>
+            <button className = 'taskFailed' onClick={() => { handleFailure() }}>{'Task Failed'}</button>
+            <button className = 'taskSucceeded'onClick={() => { handleSuccess() }}>{'Task Succeeded'}</button>
         </header>
     );
 }
