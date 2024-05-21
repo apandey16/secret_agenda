@@ -1,0 +1,27 @@
+.taskFailed {
+    background-color: red;
+    font-size: 1.25rem; 
+    color: white;
+    width: 25%;
+    padding: .65rem 1.5rem;
+    
+    border-radius: 0.5rem; 
+    cursor: pointer;
+}
+.taskFailed:hover {
+    background-color: #800000;
+}
+
+.taskSucceeded {
+    background-color: green;
+    font-size: 1.25rem; 
+    width: 25%;
+    color: white;
+    padding: .65rem 1.5rem;
+    
+    border-radius: 0.5rem; 
+    cursor: pointer;
+}
+.taskSucceeded:hover {
+    background-color: #008000;
+}

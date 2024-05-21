@@ -9,4 +9,5 @@ export const punishments = {
     9: 'Take a shot of soy sauce',
     10: 'Take a shot of pickle juice',
     11: 'Have someone slap you in the face',
+    
 }

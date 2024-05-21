@@ -3,14 +3,13 @@ import React from 'react';
 import Header from '../../../../components/header/header';
 import { punishments } from '../../../../components/TaskHandler/punishments';
 import { useRouter } from 'next/navigation';
-// import { useNavigate } from "react-router-dom";
+import '../../style.css';
 
 const Failure: React.FC = () => {
     const navigate = useRouter();
 
     function handleClick() {   
         navigate.push("/missions");
-        // console.log("Continue");
     }
 
     function generatePunishment() {

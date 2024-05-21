@@ -11,7 +11,7 @@ export const tasks = {
     10: 'Get someone to take a shot with you',
     11: 'Challange someone to a dance off, loser takes a drink',
     12: 'Challenge someone to RPS, loser takes a drink',
-    13: 'Convince someone that you have been part of a faous movie',
+    13: 'Convince someone that you have been part of a famous movie',
     14: 'Convince some that you have a famous relative',
     15: 'Use random words in a sentence and get someone to believe you are speaking a different language',
     16: 'Use a cheesy pick up line on someone in the middle of a conversation',
@@ -23,4 +23,6 @@ export const tasks = {
     22: 'Hit a bulls-eye or better in 6 darts or less',
     23: 'Play a game of chess by yourself',
     24: 'Speak in a British accent for the next 5 minutes',
+    25: 'Add something to the current conversation that has nothing to do with the topic',
+    26: 'Add something to the house suggestion board',
 }

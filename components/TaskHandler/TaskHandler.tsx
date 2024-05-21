@@ -3,6 +3,7 @@ import React from 'react';
 import { tasks } from './tasks';
 import Cookies from "js-cookie";
 import { useRouter } from 'next/navigation';
+import './style.css';
 
 const TaskHandler: React.FC = () => {
     const navigate = useRouter();
@@ -28,12 +29,11 @@ const TaskHandler: React.FC = () => {
 
     return (
         <header style={{ textAlign: 'center', textWrap:'wrap' }}>
-            {/* Route to new failure and success page to present the failure task or the success result */}
-            <pre> {'\n\nYour Current Task:'} </pre>
+            <pre> {'\nYour Current Task:'} </pre>
             <pre  style={{textWrap:'wrap'}}>{curTask}</pre>
 
-            <button onClick={() => { handleFailure() }}> Task Failed </button>
-            <button onClick={() => { handleSuccess() }}> Task Succeeded </button>
+            <button className = 'taskFailed' onClick={() => { handleFailure() }}> Task Failed </button>
+            <button className = 'taskSucceeded'onClick={() => { handleSuccess() }}> Task Succeeded </button>
         </header>
     );
 }

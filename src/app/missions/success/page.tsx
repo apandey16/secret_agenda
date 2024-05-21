@@ -3,7 +3,7 @@ import React from 'react';
 import Header from '../../../../components/header/header';
 import { rewards } from '../../../../components/TaskHandler/rewards';
 import { useRouter } from 'next/navigation';
-// import { useNavigate } from "react-router-dom";
+import '../../style.css';
 
 
 const Success: React.FC = () => {
@@ -11,7 +11,6 @@ const Success: React.FC = () => {
 
     function handleClick() {   
         navigate.push("/missions");
-        // console.log("Continue");
     }
 
     function generateReward() {
@@ -31,7 +30,7 @@ const Success: React.FC = () => {
                 {"\n\nOnce you are ready to continue, click the button below and you will get a new task."}
             </pre>
             <div style={{ display: 'flex', justifyContent: 'center' }}>
-                <button
+                <button className='continueButton'
                     onClick={() => {
                         handleClick();
                     }

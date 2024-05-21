@@ -1,10 +1,11 @@
 import React from 'react';
-
+import logo from '../images/SecretAgenda - White.png';
+import './style.css'
 
 const Header: React.FC = () => {
     return (
         <header style={{ textAlign: 'center', textWrap:'wrap' }}>
-            <h1>Secret Agenda!</h1>
+            <img src={logo.src} alt="Logo" />
         </header>
     );
 };

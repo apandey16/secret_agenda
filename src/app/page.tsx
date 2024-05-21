@@ -6,6 +6,7 @@ import { generateUniqueId } from '../../components/utlis';
 import Cookies from "js-cookie";
 import { useRouter } from 'next/navigation';
 import { generateTasks } from '../../components/TaskHandler/TaskHandler';
+import './style.css';
 
 
 const Home: React.FC = () => {

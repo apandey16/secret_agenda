@@ -1,0 +1,26 @@
+.resetButton {
+    display: inline-block;
+    padding: .65rem 1.5rem;
+    font-size: 1.25rem;
+    text-align: center;
+    text-decoration: none;
+    background-color: #007bff;
+    color: #fff;
+    border: black;
+    border-radius: .3rem;
+    cursor: pointer;
+    margin: 1.65rem;
+}
+
+.resetButton:hover {
+    background-color: #0056b3;
+}
+
+.resetButton:active {
+    background-color: #003080;
+}
+
+pre {
+    overflow-x: auto;
+    font-size: 1rem;
+}

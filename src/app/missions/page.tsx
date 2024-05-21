@@ -4,7 +4,7 @@ import Cookies from "js-cookie";
 import Header from '../../../components/header/header';
 import TaskHandler from '../../../components/TaskHandler/TaskHandler';
 import { useRouter } from 'next/navigation';
-// import { useNavigate } from 'react-router-dom';
+import './style.css';
 
 const Missions: React.FC = () => {    
     const tasksFinished = Cookies.get("tasksFinished");
@@ -28,8 +28,8 @@ const Missions: React.FC = () => {
            <pre style={{ textAlign: 'center' }}> Tasks Failed: {tasksFailed} </pre>
             <TaskHandler />
             <div style={{ textAlign: 'center'}}>
-                <pre style={{textWrap:'wrap'}}>{"\n\n\nIf you want to restart the game (reseting all of your stats) click the button below to move on."} </pre>
-                <button onClick={() => { resetGame() }}> Restart Game </button>
+                <pre style={{textWrap:'wrap'}}>{"\n\nIf you want to restart the game (reseting all of your stats) click the button below to move on."} </pre>
+                <button className='resetButton' onClick={() => { resetGame() }}> Restart Game </button>
             </div>
         </main>
     );
