@@ -27,7 +27,7 @@ const TaskHandler: React.FC = () => {
     const curTask = Cookies.get("curTask");
 
     return (
-        <header style={{ textAlign: 'center' }}>
+        <header style={{ textAlign: 'center', textWrap:'wrap' }}>
             {/* Route to new failure and success page to present the failure task or the success result */}
             <pre> {'\n\nYour Current Task:'} </pre>
             <pre>{curTask}</pre>

@@ -24,7 +24,7 @@ const Failure: React.FC = () => {
         <main>
             <Header/>
             <pre style={{ textAlign: 'center', textWrap:'wrap' }}> 
-                {"Congratulations, your father was right!\nYou were assigned a SIMPLE task and you failed.\nYou are a failure.\nYou have to keep working.\nTo keep you going we have given you a punishment. Accept it and move on to the next task. If you chose not to do the punishemnet, you must take a shot"}
+                {"Congratulations, your father was right, you are a disappointment!\nYou were assigned a SIMPLE task and you failed.\nYou are a failure.\nYou have to keep working.\nTo keep you going we have given you a punishment. Accept it and move on to the next task. If you chose not to do the punishemnet, you must take a shot"}
                 {"\n\nYour Punishment:\n"}
                 {generatePunishment()}
                 {"\n\nOnce you are ready to continue, click the button below and you will get a new task."}

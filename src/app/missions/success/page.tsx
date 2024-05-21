@@ -24,7 +24,7 @@ const Success: React.FC = () => {
     return (
         <main>
             <Header/>
-            <pre style={{ textAlign: 'center' }}> 
+            <pre style={{ textAlign: 'center', textWrap:'wrap' }}> 
                 {"Congratulations!\nYou were assigned a task and you completed it.\nWhat do you want? A cookie? You can't have one.\nYou have to keep working.\nTo keep you going we have given you a reward. Collect it and move on to the next task."}
                 {"\n\nYour Reward:\n"}
                 {generateReward()}
