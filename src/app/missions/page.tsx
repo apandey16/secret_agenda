@@ -26,8 +26,8 @@ const Missions: React.FC = () => {
            <pre style={{ textAlign: 'center' }}> Tasks Succeeded: {tasksFinished} </pre>
            <pre style={{ textAlign: 'center' }}> Tasks Failed: {tasksFailed} </pre>
             <TaskHandler />
-            <div style={{ textAlign: 'center' , textWrap:'wrap'}}>
-                <pre>{"\n\n\nIf you want to restart the game (reseting all of your stats) click the button below to move on."} </pre>
+            <div style={{ textAlign: 'center'}}>
+                <pre style={{textWrap:'wrap'}}>{"\n\n\nIf you want to restart the game (reseting all of your stats) click the button below to move on."} </pre>
                 <button onClick={() => { resetGame() }}> Restart Game </button>
             </div>
         </main>

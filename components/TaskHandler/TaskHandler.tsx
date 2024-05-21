@@ -30,7 +30,7 @@ const TaskHandler: React.FC = () => {
         <header style={{ textAlign: 'center', textWrap:'wrap' }}>
             {/* Route to new failure and success page to present the failure task or the success result */}
             <pre> {'\n\nYour Current Task:'} </pre>
-            <pre>{curTask}</pre>
+            <pre  style={{textWrap:'wrap'}}>{curTask}</pre>
 
             <button onClick={() => { handleFailure() }}> Task Failed </button>
             <button onClick={() => { handleSuccess() }}> Task Succeeded </button>
