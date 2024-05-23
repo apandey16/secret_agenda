@@ -4,7 +4,8 @@
     color: white;
     width: 30%;
     padding: .65rem 1.5rem;
-    
+    margin-right: 1rem;
+    margin-bottom: 0.5rem;
     border-radius: 0.5rem; 
     cursor: pointer;
 }
@@ -18,10 +19,25 @@
     width: 30%;
     color: white;
     padding: .65rem 1.5rem;
-    
+    margin-left: 1rem;
+    margin-bottom: 0.5rem;
     border-radius: 0.5rem; 
     cursor: pointer;
 }
 .taskSucceeded:hover {
-    background-color: #008000;
+    background-color: #013220;
+}
+
+.FreePass {
+    background-color: #9dae11;
+    font-size: 1rem; 
+    margin-top: 0.5rem;
+    color: white;
+    width: 30%;
+    padding: .65rem 1.5rem;
+    border-radius: 0.5rem; 
+    cursor: pointer;
+}
+.FreePass:hover {
+    background-color: #273e06;
 }

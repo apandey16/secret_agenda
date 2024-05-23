@@ -4,7 +4,7 @@ import Header from '../../../../components/header/header';
 import { rewards } from '../../../../components/TaskHandler/rewards';
 import { useRouter } from 'next/navigation';
 import '../../style.css';
-
+import Cookies from "js-cookie";
 
 const Success: React.FC = () => {
     const navigate = useRouter();
@@ -16,7 +16,12 @@ const Success: React.FC = () => {
     function generateReward() {
         const randomIndex = Math.floor(Math.random() * Object.keys(rewards).length);
         const rewardKey = Object.keys(rewards)[randomIndex];
-        const reward = rewards[rewardKey as unknown as keyof typeof rewards]; // Add index signature
+        if (rewardKey === '6') {
+            Cookies.set("FreePass", '1' , {expires: 1});
+        } else {
+            Cookies.set("FreePass", '0' , {expires: 1});
+        }
+        const reward = rewards[rewardKey as unknown as keyof typeof rewards]; 
         return reward;
     }
 

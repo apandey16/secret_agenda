@@ -26,14 +26,21 @@ const TaskHandler: React.FC = () => {
         navigate.push("/missions/success");
     }
     const curTask = Cookies.get("curTask");
+    const condition = Cookies.get("FreePass") === '1';
 
     return (
         <header style={{ textAlign: 'center', textWrap:'wrap' }}>
             <pre> {'\nYour Current Task:'} </pre>
             <pre  style={{textWrap:'wrap'}}>{curTask}</pre>
-
-            <button className = 'taskFailed' onClick={() => { handleFailure() }}>{'Task Failed'}</button>
-            <button className = 'taskSucceeded'onClick={() => { handleSuccess() }}>{'Task Succeeded'}</button>
+            <div>
+                <button className = 'taskFailed' onClick={() => { handleFailure() }}>{'Task Failed'}</button>
+                <button className = 'taskSucceeded'onClick={() => { handleSuccess() }}>{'Task Succeeded'}</button>
+            </div>
+            <div>
+                {condition ? (
+                    <button className="FreePass" onClick={() => { handleSuccess() }}> {'Free Pass'} </button>
+                ) : null}
+            </div>
         </header>
     );
 }

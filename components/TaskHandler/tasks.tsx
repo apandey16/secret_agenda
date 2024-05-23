@@ -4,7 +4,7 @@ export const tasks = {
     3: 'Challange someone to a thumb war, loser takes a drink',
     4: 'Challege someone to a staring contest, loser takes a drink',
     5: 'Swap drinks with someone',
-    6: 'Get someone to give you a sip of their drink',
+    6: 'Convince someone that you can make the best mixed drink ever and make them one',
     7: 'Get someone to take a sip of your drink',
     8: 'Slip something into someone\'s pocket without them noticing',
     9: 'Get someone to take a selfie with you',
@@ -25,4 +25,5 @@ export const tasks = {
     24: 'Speak in a British accent for the next 5 minutes',
     25: 'Add something to the current conversation that has nothing to do with the topic',
     26: 'Add something to the house suggestion board',
+    27: 'Switch the names of two people in a conversation',
 }
